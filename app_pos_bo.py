@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 import pandas as pd
 import os
 
@@ -25,9 +25,11 @@ layout = [
 
     [sg.Text('', key='-STATUS-', size=(70,2))],
     [sg.Text('Prévia do Resultado:'), sg.Multiline('', key='-PREVIEW-', size=(100, 15), disabled=True)]
+    [sg.Text('Referências Pré BO', font=('Helvetica', 18, 'bold'), justification='center', expand_x=True)]
+
 ]
 
-window = sg.Window('Filtrador de Referências - Versão Final', layout)
+window = sg.Window('Referencias Pré BO', layout)
 
 def encontrar_coluna_referencia(df):
     for col in df.columns:
